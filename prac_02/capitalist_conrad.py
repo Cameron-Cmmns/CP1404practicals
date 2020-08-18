@@ -17,7 +17,7 @@ INITIAL_PRICE = 10.0
 OUTPUT_FILE = "price_and_day_record"
 
 price = INITIAL_PRICE
-day_count = 0
+day_count = 1
 
 out_file = open(OUTPUT_FILE, 'w')
 
@@ -37,8 +37,13 @@ while price >= MIN_PRICE and price <= MAX_PRICE:
         price_change = random.uniform(-MAX_DECREASE, 0)
 
     price *= (1 + price_change)
-    print("On day {} price is ${:,.2f}".format(day_count, price), file=out_file)
-    day_count += 1
+
+    if price >= 101:
+        price = 101
+        print("On day {} price is $100.00".format(day_count, price), file=out_file)
+    else:
+        print("On day {} price is ${:,.2f}".format(day_count, price), file=out_file)
+        day_count += 1
 
 out_file.close()
 
