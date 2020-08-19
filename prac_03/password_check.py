@@ -5,8 +5,12 @@ Password Check
 
 
 def main():
-    password_input = input("Enter a password: ")
 
+    get_password()
+
+
+def get_password():
+    password_input = input("Enter a password: ")
     if check_password_length(password_input):
         display_password(password_input)
     else:
@@ -20,11 +24,12 @@ def check_password_length(user_input):
         return False
 
 
-def display_password(password_input):
-    password_length = len(password_input)
+def display_password(password):
 
-    for x in range(0, password_length):
-        print("*", end="")
+        password_length = len(password)
+
+        for x in range(0, password_length):
+            print("*", end="")
 
 
 main()
