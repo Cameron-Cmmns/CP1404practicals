@@ -2,31 +2,38 @@
     Word Occurrences
 """
 
-# Doesn't work: The count goes up for repeated words but they cannot be
-# called based on the count inside the for loop.
-# Possible Fixes: ##TO DO##
+# example:
+# word_to_count = {}
+# text = input("Text: ")
+# words = text.split()
+#
+# for word in words:
+#     frequency = word_to_count.get(word, 0)
+#     word_to_count[word] = frequency + 1
+#
+# words = list(word_to_count.keys())
+# words.sort()
+#
+# max_length = max(len(word) for word in words)
+# for word in words:
+#     print("{:{}} : {}".format(word, max_length, word_to_count[word]))
 
+# ----
+
+
+# Large portion copied off the example; previous attempts didn't work.
+# had to use the example for this.
 word_dict = {}
-
 input_to_dict = input("Text: ")
-
 words = input_to_dict.split()
 
-count = 1
+for word in words:
+    word_frequency = word_dict.get(word, 0)
+    word_dict[word] = word_frequency + 1
 
-for x in range(0, len(words)):
+words = list(word_dict.keys())
+words.sort()
 
-    if words[x] == words[x - 1]:
-        if x == 0 and words[x + 1] == words[x]:
-            word_dict[words[x]] = count
-            count += 1
-        word_dict[words[x]] = count
-        count += 1
-    else:
-        word_dict[words[x]] = 0
-
-    x += 1
-
-print(words)
-
-print("")
+max_length = max(len(word) for word in words)
+for word in words:
+    print("{:{}} : {}".format(word, max_length, word_dict[word]))
