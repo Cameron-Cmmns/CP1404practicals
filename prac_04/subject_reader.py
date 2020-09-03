@@ -24,6 +24,7 @@ def get_data():
         print(parts)  # See if that worked
         print("----------")
     input_file.close()
+    return parts
 
 
 main()
