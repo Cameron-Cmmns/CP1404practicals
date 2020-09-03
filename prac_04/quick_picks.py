@@ -12,6 +12,9 @@ random_number_list = []
 
 number_of_picks = int(input("How many quick picks? "))
 
+# Unable to figure out how to add number to list, either using for loop
+# or using list comprehensions
+
 for x in range(number_of_picks):
     for y in range(0, NUMBER_OF_RANDS):
         random_number = int(random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER))
