@@ -50,25 +50,9 @@ def main():
 
         # This if looks a little bad, but I am unsure how to put it in a function.
         # previous tries stopped the entire program from working.
-        if confirmation == "y":
-            pass
-        elif confirmation == "n":
-            name = input("Name: ")
-        else:
-            print("Invalid input")
-            is_valid = False
-            while not is_valid:
-                confirmation = input("Is this your name {}? (Y/n)".format(name)).lower()
 
-                if confirmation == "y":
-                    is_valid = True
-                    pass
-                elif confirmation == "n":
-                    name = input("Name: ")
-                    is_valid = True
-                else:
-                    print("Invalid input")
-                    is_valid = False
+        if confirmation == "n" or confirmation == "no":
+            name = input("Name: ")
 
         email_to_name[email] = name
         email = input("Email: ")
