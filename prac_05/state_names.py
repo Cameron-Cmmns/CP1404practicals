@@ -10,15 +10,14 @@ print(CODE_TO_NAME)
 
 state_codes = ["QLD", "NSW", "NT", "WA", "ACT", "VIC", "TAS"]
 
-for y in range(0, len(state_codes)):
-    if state_codes[y] in CODE_TO_NAME:
-        print("{:<5} is {}".format(state_codes[y], CODE_TO_NAME[state_codes[y]]))
+for state_code in CODE_TO_NAME:
+    print("{:<3} is {}".format(state_code, CODE_TO_NAME[state_code]))
 
 state_code = input("Enter short state: ").upper()
 
-while state_code != "":
+while state_code:
     if state_code in CODE_TO_NAME:
-        print(state_code, "is", CODE_TO_NAME[state_code])
+        print("{:<3} is {}".format(state_code, CODE_TO_NAME[state_code]))
     else:
         print("Invalid short state")
     state_code = input("Enter short state: ").upper()
