@@ -12,6 +12,10 @@ class Car:
         self.fuel = fuel
         self.odometer = 0
 
+    # This code causes a strange error. (Step 6-8 unable to be completed)
+    def __str__(self):
+        return "{}, fuel={}, odometer={}".format(self, self.fuel, self.odometer)
+
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
         self.fuel += amount
