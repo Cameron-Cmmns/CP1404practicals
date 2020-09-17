@@ -13,7 +13,6 @@ class Car:
         self.odometer = 0
         self.name = name
 
-    # This code causes a strange error. (Step 6-8 unable to be completed)
     def __str__(self):
         return "{}, fuel={}, odometer={}".format(self.name, self.fuel, self.odometer)
 
