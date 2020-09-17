@@ -8,13 +8,9 @@ print(COLOUR_NAMES)
 
 colour_code = input("Enter colour name: ").upper()
 
-while colour_code != "":
-    try:
-        if colour_code in COLOUR_NAMES:
-            print(COLOUR_NAMES[colour_code])
-        else:
-            print("Invalid colour name")
-        colour_code = input("Enter colour name: ").upper()
-    except ValueError:
-        print("Invalid")
-
+while colour_code:
+    if colour_code in COLOUR_NAMES:
+        print(COLOUR_NAMES[colour_code])
+    else:
+        print("Invalid colour name")
+    colour_code = input("Enter colour name: ").upper()
