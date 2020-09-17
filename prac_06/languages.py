@@ -12,5 +12,20 @@ def main():
 
     print(ruby)
 
+    is_ruby_dynamic = ruby.is_dynamic()
+    is_python_dynamic = python.is_dynamic()
+    is_visual_basic_dynamic = visual_basic.is_dynamic()
+
+    print("\nThe dynamically typed languages are: ")
+
+    if is_python_dynamic:
+        print(python.name)
+
+    if is_ruby_dynamic:
+        print(ruby.name)
+
+    if is_visual_basic_dynamic:
+        print(visual_basic.name)
+
 
 main()

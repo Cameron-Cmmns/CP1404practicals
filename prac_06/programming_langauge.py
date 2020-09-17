@@ -11,7 +11,7 @@ class ProgrammingLanguage:
         self.year = year
 
     def is_dynamic(self):
-        if self.reflection == 'True':
+        if self.reflection:
             return True
         else:
             return False
