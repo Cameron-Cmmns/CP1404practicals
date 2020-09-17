@@ -11,12 +11,4 @@ class ProgrammingLanguage:
         self.year = year
 
     def is_dynamic(self):
-        # if self.typing == "Dynamic":
-        #     return True
-        # elif self.typing == "Static":
-        #     return False
-        # else:
-        #     return None
         pass
-
-# __str__ won't work.
