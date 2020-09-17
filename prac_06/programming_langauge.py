@@ -11,4 +11,11 @@ class ProgrammingLanguage:
         self.year = year
 
     def is_dynamic(self):
-        pass
+        if self.reflection == 'True':
+            return True
+        else:
+            return False
+
+    def __str__(self):
+        return "{}, {} typing, Reflection = {}, first appeared in {}".format(self.name, self.typing,
+                                                                             self.reflection, self.year)
