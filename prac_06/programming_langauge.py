@@ -18,3 +18,5 @@ class ProgrammingLanguage:
         # else:
         #     return None
         pass
+
+# __str__ won't work.
